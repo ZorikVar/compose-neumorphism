@@ -1,9 +1,14 @@
 package org.bruce.neumorphic.demo
 
+import android.app.Activity
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -14,24 +19,38 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.core.view.WindowCompat
 import org.bruce.neumorphic.LightSource
 import org.bruce.neumorphic.NeuAttrs
-import org.bruce.neumorphic.neu
-import org.bruce.neumorphic.shape.*
-import androidx.compose.ui.res.painterResource
+import org.bruce.neumorphic.demo.R
 import org.bruce.neumorphic.demo.ui.theme.AppColors
 import org.bruce.neumorphic.demo.ui.theme.AppTextStyle
 import org.bruce.neumorphic.demo.ui.theme.NeumorphicTheme
-import org.bruce.neumorphic.demo.R
+import org.bruce.neumorphic.neu
+import org.bruce.neumorphic.shape.*
 
 @Composable
 fun App() {
     var isDarkTheme by remember {
         mutableStateOf(false)
     }
+
+    val view = LocalView.current
+    SideEffect {
+        val window = (view.context as Activity).window
+        WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !isDarkTheme
+    }
+
     NeumorphicTheme(isDarkTheme = isDarkTheme) {
-        Surface(modifier = Modifier.fillMaxSize()) {
+        Surface(modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colors.background)
+            .statusBarsPadding()
+            .navigationBarsPadding()
+        ) {
             Column {
                 TitleWithThemeToggle(
                     title = "Neumorphic UI",
