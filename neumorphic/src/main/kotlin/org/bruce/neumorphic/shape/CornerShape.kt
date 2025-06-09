@@ -9,4 +9,3 @@ sealed class CornerShape {
 object Oval : CornerShape()
 
 class RoundedCorner(val radius: Dp) : CornerShape()
-

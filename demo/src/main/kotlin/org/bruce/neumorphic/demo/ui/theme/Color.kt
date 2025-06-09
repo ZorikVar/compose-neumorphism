@@ -4,7 +4,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-
 object AppColors {
     val Purple200 = Color(0xFFBB86FC)
     val Purple500 = Color(0xFF6200EE)

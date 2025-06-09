@@ -9,7 +9,6 @@ import androidx.compose.ui.tooling.preview.Preview
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
             App()
         }
@@ -22,13 +21,11 @@ fun AppAndroidPreview() {
     App()
 }
 
-
 @Preview
 @Composable
 fun InputBoxWithCardWrapperPreview() {
     InputBoxWithCardWrapper()
 }
-
 
 @Preview
 @Composable
@@ -36,13 +33,11 @@ fun PlainInputBoxPreview() {
     PlainInputBox()
 }
 
-
 @Preview
 @Composable
 fun CheckBoxAndRadioButtonsPreview() {
     CheckBoxAndRadioButtons()
 }
-
 
 @Preview
 @Composable
@@ -50,13 +45,11 @@ fun PressedSliderPreview() {
     PressedSlider()
 }
 
-
 @Preview
 @Composable
 fun FlatSliderPreview() {
     FlatSlider()
 }
-
 
 @Preview
 @Composable
@@ -64,13 +57,11 @@ fun PressedButtonPreview() {
     PressedButton()
 }
 
-
 @Preview
 @Composable
 fun FlatButtonPreview() {
     FlatButton()
 }
-
 
 @Preview
 @Composable

@@ -29,8 +29,6 @@ internal fun Any.makeNormalBlur(
     this.maskFilter = BlurMaskFilter(blurRadius, BlurMaskFilter.Blur.NORMAL)
 }
 
-
-
 internal fun ContentDrawScope.drawBackgroundShadows(
     neuShape: NeuShape, style: NeuStyle
 ) {

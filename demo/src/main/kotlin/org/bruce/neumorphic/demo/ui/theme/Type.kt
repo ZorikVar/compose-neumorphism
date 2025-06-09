@@ -65,11 +65,9 @@ fun getTypography(isDarkTheme: Boolean): Typography {
             color = textColor
         )
     )
-
 }
 
 object AppTextStyle {
-
     @Composable
     fun body1() = MaterialTheme.typography.body1
 
@@ -86,5 +84,4 @@ object AppTextStyle {
 
     @Composable
     fun button() = MaterialTheme.typography.button;
-
 }

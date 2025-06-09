@@ -9,7 +9,6 @@ import org.bruce.neumorphic.shape.Flat
 import org.bruce.neumorphic.shape.NeuShape
 import org.bruce.neumorphic.shape.RoundedCorner
 
-
 /**
  * Class used to capture all the neumorphic style attributes.
  *

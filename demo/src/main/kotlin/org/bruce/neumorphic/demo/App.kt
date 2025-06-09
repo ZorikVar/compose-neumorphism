@@ -59,7 +59,6 @@ fun App() {
     }
 }
 
-
 @Composable
 fun TitleWithThemeToggle(title: String, isDarkTheme: Boolean, onThemeToggle: () -> Unit) {
     Row(
