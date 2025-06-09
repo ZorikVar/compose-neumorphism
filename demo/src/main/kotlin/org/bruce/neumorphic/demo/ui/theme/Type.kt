@@ -77,11 +77,11 @@ object AppTextStyle {
     }
 
     @Composable
-    fun subtitle1() = MaterialTheme.typography.subtitle1;
+    fun subtitle1() = MaterialTheme.typography.subtitle1
 
     @Composable
-    fun subtitle2() = MaterialTheme.typography.subtitle2;
+    fun subtitle2() = MaterialTheme.typography.subtitle2
 
     @Composable
-    fun button() = MaterialTheme.typography.button;
+    fun button() = MaterialTheme.typography.button
 }

@@ -28,7 +28,7 @@ import org.bruce.neumorphic.demo.R
 @Composable
 fun App() {
     var isDarkTheme by remember {
-        mutableStateOf(true)
+        mutableStateOf(false)
     }
     NeumorphicTheme(isDarkTheme = isDarkTheme) {
         Surface(modifier = Modifier.fillMaxSize()) {
@@ -217,7 +217,7 @@ fun CheckBoxAndRadioButtons() {
 @Composable
 fun PressedSlider() {
     var sliderValue by remember {
-        mutableStateOf(defaultElevation.value)
+        mutableFloatStateOf(defaultElevation.value)
     }
     Slider(
         modifier = Modifier
@@ -231,7 +231,7 @@ fun PressedSlider() {
 @Composable
 fun FlatSlider() {
     var sliderValue by remember {
-        mutableStateOf(defaultElevation.value)
+        mutableFloatStateOf(defaultElevation.value)
     }
     Card(
         modifier = Modifier
